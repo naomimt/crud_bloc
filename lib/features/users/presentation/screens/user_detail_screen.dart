@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 import '../../data/models/user.dart';
 import '../blocs/user_bloc.dart';
 import 'user_form_screen.dart';

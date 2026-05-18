@@ -99,11 +99,11 @@ class UserBloc extends Bloc<UserEvent, UserState> {
             ? event.user.copyWith(id: _nextLocalId())
             : createdUser;
         _users.insert(0, newUser);
-        emit(UserSuccess('User created successfully', List.from(_users)));
+        emit(UserSuccess('User added successfully', List.from(_users)));
       } catch (e) {
         final localUser = event.user.copyWith(id: _nextLocalId());
         _users.insert(0, localUser);
-        emit(UserSuccess('User created locally', List.from(_users)));
+        emit(UserSuccess('User added successfully', List.from(_users)));
       }
     });
 
@@ -120,7 +120,7 @@ class UserBloc extends Bloc<UserEvent, UserState> {
         final index = _users.indexWhere((u) => u.id == event.user.id);
         if (index != -1) {
           _users[index] = event.user;
-          emit(UserSuccess('User updated locally', List.from(_users)));
+          emit(UserSuccess('User updated successfully', List.from(_users)));
         } else {
           emit(UserError(e.toString()));
         }
@@ -134,10 +134,10 @@ class UserBloc extends Bloc<UserEvent, UserState> {
         _users.removeWhere((u) => u.id == event.id);
         emit(UserSuccess('User deleted successfully', List.from(_users)));
       } catch (e) {
-        final existsLocally = _users.any((u) => u.id == event.id);
+        final exists = _users.any((u) => u.id == event.id);
         _users.removeWhere((u) => u.id == event.id);
-        if (existsLocally) {
-          emit(UserSuccess('User deleted locally', List.from(_users)));
+        if (exists) {
+          emit(UserSuccess('User deleted successfully', List.from(_users)));
         } else {
           emit(UserError(e.toString()));
         }
