@@ -13,10 +13,10 @@ class AppRouter {
         builder: (context, state) => const UserListScreen(),
         routes: [
           GoRoute(
-            path: 'details',
+            path: 'details/:id',
             builder: (context, state) {
-              final user = state.extra as User;
-              return UserDetailScreen(user: user);
+              final id = int.tryParse(state.pathParameters['id'] ?? '') ?? 0;
+              return UserDetailScreen(userId: id);
             },
           ),
           GoRoute(

@@ -1,17 +1,19 @@
-# crud_bloc
+# Home Screen
 
-A new Flutter project.
+![Home Screen](screenshots/home.png)
 
-## Getting Started
+# Delete user
 
-This project is a starting point for a Flutter application.
+![User List Screen](screenshots/delete_user.png)
 
-A few resources to get you started if this is your first Flutter project:
+# New user Screen
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+![User Form Screen](screenshots/new_user.png)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# User Detail Screen
+
+![User Detail Screen](screenshots/user_detail.png)
+
+# Edit User Screen
+
+![Edit User Screen](screenshots/edit_user.png)
