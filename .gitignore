@@ -57,3 +57,4 @@ app.*.map.json
 # Keep contents inside allowed folders
 !lib/**
 !assets/**
+!README.md
